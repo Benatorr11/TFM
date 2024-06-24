@@ -2,14 +2,15 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-image: url('./ficheros/imagenes/icon_fondo_bueno_2.webp');
+    background-image: url('./ficheros/imagenes/icon_fondo_bueno_1.webp');
     background-size: cover;
     background-position: center;
     transition: background-image 1s ease-in-out;
-    color: #fff; /* Asegúrate de que el texto sea blanco para todos los elementos */
+    color: #fff;
+    display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
+    height: 100vh; /* Usar la altura completa de la ventana */
 }
 
 header {
@@ -43,7 +44,7 @@ header {
 #tema-toggle {
     width: 60px;
     height: 60px;
-    background-image: url('./ficheros/imagenes/ajuste.png'); /* Usa la imagen que subiste */
+    background-image: url('./ficheros/imagenes/icon_cambio_tema.PNG'); /* Usa la imagen que subiste */
     background-size: cover;
     border: none;
     border-radius: 50%;
@@ -136,11 +137,11 @@ body.tema-oscuro select {
 }
 
 #mode-buttons #basico {
-    background-image: url('./ficheros/imagenes/letra-b.png');
+    background-image: url('./ficheros/imagenes/letra_B.png');
 }
 
 #mode-buttons #avanzado {
-    background-image: url('./ficheros/imagenes/letra-a.png');
+    background-image: url('./ficheros/imagenes/letra_A.PNG');
 }
 
 .button-container {

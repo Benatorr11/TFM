@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AIRNET</title>
+    <title>AIRNET - Básica</title>
     <link rel="stylesheet" type="text/css" href="stlyles_basica.css">
     <link rel="icon" href="./ficheros/imagenes/icono.png" type="image/png">
     <script src="https://cdn.sheetjs.com/xlsx-0.20.1/package/dist/xlsx.full.min.js"></script>
@@ -21,28 +21,27 @@
 
 <body>
     <header>
-        <h1 id="titulo">AIREnet</h1>
-    </header>
-
-    <div id="tema-container">
-        <div id="tema">
-            <div id="tema-boton">
-                <button id="tema-toggle" onclick="toggleModo()"></button>
-                <div id="tema-opciones">
-                    <button id="tema-oscuro" onclick="activarModoOscuro()">Modo Oscuro</button>
-                    <button id="tema-claro" onclick="activarModoClaro()">Modo Claro</button>
+        <div id="tema-container">
+            <div id="tema">
+                <div id="tema-boton">
+                    <button id="tema-toggle" onclick="toggleModo()"></button>
+                    <div id="tema-opciones">
+                        <button id="tema-oscuro" onclick="activarModoOscuro()">Modo Oscuro</button>
+                        <button id="tema-claro" onclick="activarModoClaro()">Modo Claro</button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+        
+        <h1 id="titulo">AIREnet - Básica</h1>
 
-
-    <div id="modo-container">
-        <div id="modo">
-            <button id="basico" onclick="toggleColor(this)"></button>
-            <button id="avanzado" onclick="toggleColor(this)"></button>
+        <div id="modo-container">
+            <div id="modo">
+                <button id="basico" onclick="toggleColor(this)"></button>
+                <button id="avanzado" onclick="toggleColor(this)"></button>
+            </div>
         </div>
-    </div>
+    </header>
 
     <div id="comboboxes">
         <div id="combo1-container">

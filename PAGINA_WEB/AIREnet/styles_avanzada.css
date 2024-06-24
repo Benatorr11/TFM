@@ -2,14 +2,15 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-image: url('./ficheros/imagenes/icon_fondo_bueno_2.webp');
+    background-image: url('./ficheros/imagenes/icon_fondo_bueno_1.webp');
     background-size: cover;
     background-position: center;
     transition: background-image 1s ease-in-out;
-    color: #fff; /* Asegúrate de que el texto sea blanco para todos los elementos */
+    color: #fff;
+    display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
+    height: 100vh; /* Usar la altura completa de la ventana */
 }
 
 header {
@@ -43,7 +44,7 @@ header {
 #tema-toggle {
     width: 60px;
     height: 60px;
-    background-image: url('./ficheros/imagenes/ajuste.png'); /* Usa la imagen que subiste */
+    background-image: url('./ficheros/imagenes/icon_cambio_tema.PNG'); /* Usa la imagen que subiste */
     background-size: cover;
     border: none;
     border-radius: 50%;
@@ -120,27 +121,40 @@ body.tema-oscuro select {
 }
 /* FIN - Modo Oscuro */
 
-#mode-buttons button {
-    width: 50px; /* Ancho del botón */
-    height: 50px; /* Altura del botón */
-    background-size: cover;
-    border-radius: 50%;
-    border: none;
-    cursor: pointer;
+#modo-container {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
-    color: #fff;
-    font-size: 18px; /* Tamaño del texto en los botones */
-    margin-left: 10px; /* Espaciado entre botones */
+    margin: 20px;
+    height: 100%;
 }
 
-#mode-buttons #basico {
-    background-image: url('./ficheros/imagenes/letra-b.png');
+#modo {
+    display: flex;
+    gap: 10px;
 }
 
-#mode-buttons #avanzado {
-    background-image: url('./ficheros/imagenes/letra-a.png');
+#basico, #avanzado {
+    width: 60px; /* Establece el ancho del botón más pequeño */
+    height: 60px; /* Asegúrate de que la altura y el ancho sean iguales para forma circular */
+    border-radius: 50%; /* Hace el botón redondo */
+    border: none; /* Elimina el borde del botón */
+    background-size: 100% 100%; /* Asegura que la imagen cubra completamente el botón */
+    background-position: center; /* Centra la imagen en el botón */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    outline: none; /* Evita que se muestre un contorno cuando se hace clic */
+    display: flex; /* Alineación central de los elementos internos, si hay alguno */
+    justify-content: center; /* Centra horizontalmente el contenido intero */
+    align-items: center; /* Centra verticalmente el contenido interno */
+    overflow: hidden; /* Evita desbordamientos visuales */
+}
+
+#basico {
+    background-image: url('./ficheros/imagenes/letra_B.png');
+}
+
+#avanzado {
+    background-image: url('./ficheros/imagenes/letra_A.PNG');
 }
 
 .button-container {

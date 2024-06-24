@@ -41,10 +41,14 @@ let intervalId = null;
 function cambiarImagenFondo(oscuro) {
     // Definir los paths de las imágenes para ambos modos
     const imagenesClaras = [
-        './ficheros/imagenes/icon_fondo_bueno_2.webp'
+        './ficheros/imagenes/icon_fondo_bueno_1.webp',
+        './ficheros/imagenes/icon_fondo_bueno_2.webp',
+        './ficheros/imagenes/icon_fondo_bueno_3.webp'
     ];
     const imagenesOscuras = [
-        './ficheros/imagenes/icon_fondo_malo_2.webp'
+        './ficheros/imagenes/icon_fondo_malo_1.webp',
+        './ficheros/imagenes/icon_fondo_malo_2.webp',
+        './ficheros/imagenes/icon_fondo_malo_3.webp'
     ];
 
     // Seleccionar el arreglo de imágenes según el modo
@@ -60,7 +64,7 @@ function cambiarImagenFondo(oscuro) {
     intervalId = setInterval(() => {
         document.body.style.backgroundImage = `url('${imagenes[index]}')`;
         index = (index + 1) % imagenes.length;
-    }, 1000);
+    }, 3000);
 }
 
 function activarModoOscuro() {

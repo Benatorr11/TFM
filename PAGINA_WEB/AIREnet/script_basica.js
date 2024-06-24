@@ -12,31 +12,31 @@ function toggleModo() {
     temaOpciones.style.display = temaOpciones.style.display === 'block' ? 'none' : 'block';
 }
 
+function actualizarGraficos(temaOscuro) {
+    const colorTexto = temaOscuro ? '#fff' : '#000';
+    Chart.helpers.each(Chart.instances, function(instance) {
+        instance.options.scales.x.ticks.color = colorTexto;
+        instance.options.scales.y.ticks.color = colorTexto;
+        instance.options.scales.x.title.color = colorTexto;
+        instance.options.scales.y.title.color = colorTexto;
+        instance.update();
+    });
+}
+
 function activarModoOscuro() {
     document.body.classList.add('modo-oscuro');
     cambiarImagenFondo(true);
-    actualizarGraficos(true);
+    actualizarGraficos(true); // Asegúrate de que esta línea esté ejecutando correctamente
     temaOpciones.style.display = 'none';
 }
 
 function activarModoClaro() {
     document.body.classList.remove('modo-oscuro');
     cambiarImagenFondo(false);
-    actualizarGraficos(false);
+    actualizarGraficos(false); // Asegúrate de que esta línea esté ejecutando correctamente
     temaOpciones.style.display = 'none';
 }
 
-function actualizarGraficos(temaOscuro) {
-    const color = temaOscuro ? '#fff' : '#000';
-
-    Chart.helpers.each(Chart.instances, function(instance) {
-        instance.options.scales.x.ticks.color = color;
-        instance.options.scales.y.ticks.color = color;
-        instance.options.scales.x.grid.color = color;
-        instance.options.scales.y.grid.color = color;
-        instance.update();
-    });
-}
 temaToggle.addEventListener('click', temaToggle);
 /* FIN - Cambio de tema */
 
@@ -45,10 +45,14 @@ let intervalId = null;
 function cambiarImagenFondo(oscuro) {
     // Definir los paths de las imágenes para ambos modos
     const imagenesClaras = [
-        './ficheros/imagenes/icon_fondo_bueno_2.webp'
+        './ficheros/imagenes/icon_fondo_bueno_1.webp',
+        './ficheros/imagenes/icon_fondo_bueno_2.webp',
+        './ficheros/imagenes/icon_fondo_bueno_3.webp'
     ];
     const imagenesOscuras = [
-        './ficheros/imagenes/icon_fondo_malo_2.webp'
+        './ficheros/imagenes/icon_fondo_malo_1.webp',
+        './ficheros/imagenes/icon_fondo_malo_2.webp',
+        './ficheros/imagenes/icon_fondo_malo_3.webp'
     ];
 
     // Seleccionar el arreglo de imágenes según el modo
@@ -64,7 +68,7 @@ function cambiarImagenFondo(oscuro) {
     intervalId = setInterval(() => {
         document.body.style.backgroundImage = `url('${imagenes[index]}')`;
         index = (index + 1) % imagenes.length;
-    }, 1000);
+    }, 3000);
 }
 
 function activarModoOscuro() {
