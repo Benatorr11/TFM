@@ -1,0 +1,44 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #007bff;
+    color: white;
+}
+
+#modeloSelector {
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.grid-container {
+    display: flex;
+    flex-direction: column; /* Alinear contenidos verticalmente */
+    align-items: center;
+    width: 100%;
+}
+
+.modelo-container {
+    text-align: center;
+    width: 100%; /* Cada modelo ocupa toda la anchura cuando está activo */
+    margin-top: 20px;
+}
+
+.modelo-container h3 {
+    margin-bottom: 10px;
+}
+
+.modelo-img {
+    width: 150px;
+    height: 150px;
+    background-color: #ccc;
+    border: 1px solid black;
+    margin-top: 5px;
+}

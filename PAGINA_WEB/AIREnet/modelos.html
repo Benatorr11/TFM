@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Modelos de Predicción</title>
+    <link rel="stylesheet" href="styles_modelos.css">
+</head>
+
+<body>
+    <header>
+        <div id="tema-container">
+            <div id="tema">
+                <div id="tema-boton">
+                    <button id="tema-toggle" onclick="toggleModo()"></button>
+                    <div id="tema-opciones">
+                        <button id="tema-oscuro" onclick="activarModoOscuro()">Modo Oscuro</button>
+                        <button id="tema-claro" onclick="activarModoClaro()">Modo Claro</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h1 id="titulo">AIREnet - Modelos de Predicción</h1>
+        <div id="mode-buttons">
+            <button id="basico" onclick="window.location.href='basica.html'"></button>
+            <button id="avanzado" onclick="window.location.href='avanzada.html'"></button>
+        </div>
+    </header>
+    <div class="button-container">
+        <button id="MODELOS Básicos" onclick="window.location.href='./modelos_basicos.html'">Modelos Básicos</button>
+        <button id="MODELOS Mejorados" onclick="window.location.href='./modelos_mejorados.html'">Modelos Mejorados</button>
+        <button id="Comparación" onclick="window.location.href='./modelos_comp.html'">Comparación de Modelos</button>
+    </div>
+    <script src="script_modelos.js"></script>
+</body>
+
+</html>

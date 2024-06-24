@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>AIRnet - Modelos Mejorados</title>
+    <link rel="stylesheet" href="styles_modelos_mejorados.css">
+</head>
+<body>
+    <header>
+        <h1>AIRnet - Modelos Mejorados</h1>
+        <select id="modeloSelector" onchange="mostrarResultados(this.value)">
+            <option value="">Seleccione un modelo</option>
+            <option value="KNN">KNN - mejorado</option>
+            <option value="SVM">SVM - mejorado</option>
+            <option value="XGBoost">XGBoost - mejorado</option>
+            <option value="AdaBoost">AdaBoost - mejorado</option>
+            <option value="LSTM">LSTM - mejorado</option>
+            <option value="todos">TODAS</option>
+        </select>
+    </header>
+    <div id="resultados" class="grid-container">
+        <!-- Resultados se mostrarán aquí -->
+    </div>
+    <script src="script_modelos_m.js"></script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIRNET</title>
+    <link rel="stylesheet" type="text/css" href="stlyles_basica.css">
+    <link rel="icon" href="./ficheros/imagenes/icono.png" type="image/png">
+    <script src="https://cdn.sheetjs.com/xlsx-0.20.1/package/dist/xlsx.full.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@sgratzl/chartjs-chart-boxplot@4.3.1/build/index.umd.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <!-- SCRIPTS PARA LA GENERACIÓN DEL MAPA -->
+    <script src="https://developer.here.com/api-explorer/maps-js/markers/markers-on-the-map"></script>
+    <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-core.js"></script>
+    <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-service.js"></script>
+    <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-ui.js"></script>
+    <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-mapevents.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1 id="titulo">AIREnet</h1>
+    </header>
+
+    <div id="tema-container">
+        <div id="tema">
+            <div id="tema-boton">
+                <button id="tema-toggle" onclick="toggleModo()"></button>
+                <div id="tema-opciones">
+                    <button id="tema-oscuro" onclick="activarModoOscuro()">Modo Oscuro</button>
+                    <button id="tema-claro" onclick="activarModoClaro()">Modo Claro</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="modo-container">
+        <div id="modo">
+            <button id="basico" onclick="toggleColor(this)"></button>
+            <button id="avanzado" onclick="toggleColor(this)"></button>
+        </div>
+    </div>
+
+    <div id="comboboxes">
+        <div id="combo1-container">
+            <select id="combo1" onchange="showStations()">
+                <option value="">VACIO</option>
+                <option value="stations">INFORMACIÓN DE ESTACIONES</option>
+            </select>
+            <div id="combo1-list"></div>
+        </div>
+        <div id="combo2-container">
+            <select id="combo2" onchange="showPollutants()">
+                <option value="">VACIO</option>
+                <option value="pollutants">INFORMACIÓN DE CONTAMINANTES</option>
+            </select>
+            <div id="combo2-list"></div>
+        </div>
+    </div>
+    
+    <div id="graficos">
+        <div id="grafico1">
+            <h3 class="titulo-grafico">Distribución de estaciones por comunidad autonoma</h3>
+            <canvas id="canvas1"></canvas>
+        </div>
+        <div id="grafico2">
+            <h3 class="titulo-grafico">Distribución de estaciones por provincia</h3>
+            <canvas id="canvas2"></canvas>
+        </div>
+        <div id="mapa" style="width: 100%; height: 800px;">
+            <h3 class="titulo-grafico">Mapa de Estaciones</h3>
+        </div>
+    </div>
+    
+    <script src="script_basica.js"></script>
+</body>
+
+</html>

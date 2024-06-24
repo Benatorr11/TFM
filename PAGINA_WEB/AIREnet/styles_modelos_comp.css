@@ -1,0 +1,220 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+header {
+    text-align: center;
+    background-color: #007bff;
+    color: white;
+    padding: 20px 0;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.imagen-pequeña, .imagen-grande {
+    flex: 1 1 100%;
+    margin: 10px;
+    text-align: center;
+}
+
+.imagen-pequeña {
+    max-width: 50%;
+}
+
+.imagen-pequeña img, .imagen-grande img {
+    width: 100%;
+    height: auto;
+}
+
+h2 {
+    font-size: 16px;
+    color: #333;
+    margin: 0 0 10px;
+}
+
+@media (min-width: 600px) {
+    .imagen-pequeña {
+        flex-basis: calc(50% - 20px);
+    }
+    .imagen-grande {
+        flex-basis: 100%;
+    }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('./ficheros/imagenes/icon_fondo_bueno_2.webp');
+    background-size: cover;
+    background-position: center;
+    transition: background-image 1s ease-in-out;
+    color: #fff; /* Asegúrate de que el texto sea blanco para todos los elementos */
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente para mejor visibilidad del título y botones */
+}
+
+#titulo {
+    font-family: 'Raleway', sans-serif;
+    font-size: 24px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+#tema-container {
+    display: flex;
+    justify-content: flex-start; /* Cambia esto para alinear a la izquierda */
+    align-items: center;
+    margin: 20px;
+    height: 100%;
+}
+
+#tema-boton {
+    position: relative;
+}
+
+#tema-toggle {
+    width: 60px;
+    height: 60px;
+    background-image: url('./ficheros/imagenes/ajuste.png'); /* Usa la imagen que subiste */
+    background-size: cover;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    outline: none;
+    margin-top: 10px;
+}
+
+#tema-opciones {
+    display: none;
+    position: absolute;
+    top: -20px;
+    left: 130%; /* Para alinear a la izquierda */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#tema-opciones button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #fff;
+    cursor: pointer;
+    text-align: left;
+}
+
+#tema-opciones button:hover {
+    background-color: #f1f1f1;
+}
+
+#tema-toggle:focus + #tema-opciones,
+#tema-opciones:hover {
+    display: block;
+}
+
+/* INICIO - Modo Oscuro */
+/* Modo Oscuro */
+body.tema-oscuro {
+    color: #fff;
+}
+
+body.tema-oscuro header {
+    background-color: #333;
+}
+
+body.tema-oscuro #titulo {
+    color: #fff;
+}
+
+body.tema-oscuro #tema-toggle {
+    background-color: #333;
+    color: #fff;
+}
+
+body.motemado-oscuro #tema-opciones {
+    background-color: #333;
+}
+
+body.tema-oscuro #tema-opciones button {
+    background-color: #333;
+    color: #fff;
+}
+
+body.tema-oscuro #tema-opciones button:hover {
+    background-color: #555;
+}
+
+body.tema-oscuro select {
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #fff;
+}
+/* FIN - Modo Oscuro */
+
+#mode-buttons button {
+    width: 50px; /* Ancho del botón */
+    height: 50px; /* Altura del botón */
+    background-size: cover;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 18px; /* Tamaño del texto en los botones */
+    margin-left: 10px; /* Espaciado entre botones */
+}
+
+#mode-buttons #basico {
+    background-image: url('./ficheros/imagenes/letra-b.png');
+}
+
+#mode-buttons #avanzado {
+    background-image: url('./ficheros/imagenes/letra-a.png');
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    width: 100%; /* Ajustar según el diseño */
+    height: 100%;
+    position: absolute;
+    top: 100%; /* Ajusta esto para mover los botones más abajo */
+    margin-top: 250px;
+}
+
+.button-container button {
+    margin: 0 20px; /* Espaciado entre botones */
+    padding: 20px 40px; /* Tamaño del botón */
+    font-size: 24px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 20%;
+}
+
+.button-container button:hover {
+    background-color: #0056b3;
+}
